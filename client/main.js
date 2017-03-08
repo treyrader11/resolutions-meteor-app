@@ -28,13 +28,13 @@ Template.resolution.events({
 Resolutions = new Mongo.Collection('resolutions');
 
 
-//if (Meteor.isClient) {
+if (Meteor.isClient) {
 	Template.body.helpers({
 		resolutions: function() {
 			return Resolutions.find();
 			//console.log(Resolutions.find());
 		}
-//	})
+	})
 
 	Template.body.events({
 		'submit .new-resolution': function(event) {
